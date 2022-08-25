@@ -4,7 +4,7 @@ export default class Validator {
   }
 
   validateUsername() {
-    const regex = /[^\d\W_](^\d)*(([^a-z|\D])\d{0,3})*[^\d\W_]\w*/i;
+    const regex = /[^\d\W_](^\d)*(([^a-z|\D])\d{0,3})*(\w*[^\d\W_])/i;
     if (this.nick.match(regex)[0] === this.nick.match(regex).input) {
       return true;
     }
